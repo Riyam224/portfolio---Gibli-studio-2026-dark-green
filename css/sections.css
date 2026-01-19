@@ -1,0 +1,690 @@
+/* ========== HERO SECTION ========== */
+.hero {
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   position: relative;
+   overflow: hidden;
+   padding-top: 80px;
+   margin-bottom: 120px;
+}
+
+.hero-atmosphere {
+   position: absolute;
+   inset: 0;
+   pointer-events: none;
+   overflow: hidden;
+}
+
+.hero-fog {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: radial-gradient(ellipse at center, var(--primary-glow), transparent 60%);
+   filter: blur(100px);
+   opacity: 0.3;
+   animation: drift 30s ease-in-out infinite;
+}
+
+.fog-1 {
+   animation-delay: 0s;
+   top: -20%;
+   left: -10%;
+}
+
+.fog-2 {
+   animation-delay: -10s;
+   top: 20%;
+   right: -10%;
+}
+
+.fog-3 {
+   animation-delay: -20s;
+   bottom: -10%;
+   left: 20%;
+}
+
+@keyframes drift {
+   0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+   50% { transform: translate(40px, -40px) scale(1.2); opacity: 0.2; }
+}
+
+.hero-editorial {
+   display: grid;
+   grid-template-columns: 100px 1fr;
+   gap: 80px;
+   align-items: center;
+   position: relative;
+   z-index: 2;
+}
+
+.vertical-text {
+   writing-mode: vertical-rl;
+   text-orientation: mixed;
+   font-size: 0.75rem;
+   letter-spacing: 0.3em;
+   color: var(--muted);
+   text-transform: uppercase;
+   font-weight: 500;
+}
+
+.hero-content {
+   max-width: 900px;
+}
+
+.hero-content h1 {
+   font-family: 'Baloo 2', sans-serif;
+   font-weight: 800;
+   letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+   max-width: 600px;
+   margin: 32px 0 48px;
+   font-size: 1.15rem;
+   line-height: 1.8;
+   color: var(--text-soft);
+   font-family: 'Nunito', sans-serif;
+   font-weight: 500;
+}
+
+.hero-cta {
+   margin-top: 48px;
+}
+
+.scroll-indicator {
+   position: fixed;
+   bottom: 60px;
+   left: 50%;
+   transform: translateX(-50%);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 16px;
+   opacity: 0;
+   z-index: 100;
+   transition: opacity 0.5s ease;
+   cursor: pointer;
+   pointer-events: none;
+}
+
+.scroll-indicator.visible {
+   opacity: 0.6;
+   pointer-events: auto;
+}
+
+.scroll-indicator.visible:hover {
+   opacity: 1;
+}
+
+.scroll-text {
+   font-size: 0.7rem;
+   font-weight: 500;
+   text-transform: uppercase;
+   letter-spacing: 0.2em;
+   color: var(--muted);
+   user-select: none;
+}
+
+.scroll-line {
+   width: 2px;
+   height: 50px;
+   background: linear-gradient(to bottom, var(--primary) 0%, var(--primary) 40%, transparent 100%);
+   position: relative;
+   border-radius: 2px;
+   overflow: hidden;
+}
+
+.scroll-line::after {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 30%;
+   background: var(--accent);
+   border-radius: 2px;
+   animation: scroll-pulse 2s ease-in-out infinite;
+}
+
+@keyframes scroll-pulse {
+   0% {
+      opacity: 0;
+      transform: translateY(-10px);
+   }
+   50% {
+      opacity: 1;
+   }
+   100% {
+      opacity: 0;
+      transform: translateY(50px);
+   }
+}
+
+/* ========== PROJECTS SECTION ========== */
+.section-description {
+   max-width: 700px;
+   margin-top: 16px;
+   margin-bottom: 60px;
+   font-size: 1.1rem;
+   color: var(--text-soft);
+   line-height: 1.7;
+}
+
+/* Project Filters - Ghibli rounded style */
+.project-filters {
+   display: flex;
+   gap: 12px;
+   margin-bottom: 60px;
+   flex-wrap: wrap;
+}
+
+.filter-btn {
+   padding: 12px 26px;
+   background: var(--surface-glass);
+   backdrop-filter: blur(10px);
+   border: 2px solid rgba(255, 255, 255, 0.08);
+   border-radius: 999px;
+   color: var(--text-soft);
+   font-size: 0.95rem;
+   font-weight: 600;
+   font-family: 'Nunito', sans-serif;
+   cursor: pointer;
+   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.filter-btn:hover {
+   background: var(--surface);
+   border-color: rgba(123, 168, 136, 0.3);
+   color: var(--text);
+   transform: translateY(-2px) scale(1.02);
+   box-shadow: 0 4px 16px rgba(123, 168, 136, 0.12);
+}
+
+.filter-btn.active {
+   background: var(--primary);
+   border-color: var(--primary);
+   color: white;
+   box-shadow: 0 6px 20px var(--primary-glow);
+   transform: scale(1.02);
+}
+
+/* Projects Grid */
+.projects-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+   gap: 32px;
+}
+
+.project-card {
+   position: relative;
+   overflow: hidden;
+   cursor: pointer;
+   display: flex;
+   flex-direction: column;
+   min-height: 480px;
+   border-radius: var(--radius-lg);
+   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-glow {
+   position: absolute;
+   inset: -50%;
+   background: radial-gradient(circle at center, var(--primary-glow), transparent 70%);
+   opacity: 0;
+   transition: opacity 0.8s ease;
+   pointer-events: none;
+}
+
+.project-card:hover .project-glow {
+   opacity: 1;
+}
+
+.project-card:hover {
+   transform: translateY(-10px) scale(1.01);
+   border-color: rgba(255, 255, 255, 0.15);
+   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.2),
+               0 8px 24px var(--primary-glow);
+}
+
+.project-image-container {
+   width: 100%;
+   height: 200px;
+   background: linear-gradient(135deg, var(--leaf-green), var(--accent));
+   border-radius: var(--radius-lg);
+   overflow: hidden;
+   position: relative;
+   margin-bottom: 24px;
+   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.project-image {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover .project-image {
+   transform: scale(1.05);
+}
+
+.project-placeholder {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 3rem;
+   opacity: 0.3;
+}
+
+.project-content {
+   position: relative;
+   z-index: 2;
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   padding: 0 32px 32px;
+}
+
+.project-category {
+   font-size: 0.85rem;
+   text-transform: lowercase;
+   letter-spacing: 0.05em;
+   color: var(--primary);
+   font-weight: 600;
+   font-family: 'Caveat', cursive;
+   font-size: 1rem;
+   margin-bottom: 12px;
+   position: relative;
+   padding-left: 18px;
+}
+
+.project-category::before {
+   content: '✦';
+   position: absolute;
+   left: 0;
+   font-size: 0.8rem;
+   color: var(--primary);
+}
+
+.project-content h3 {
+   margin-bottom: 16px;
+}
+
+.project-description {
+   margin-bottom: 24px;
+   line-height: 1.7;
+   flex: 1;
+}
+
+.project-tags {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 8px;
+   margin-top: auto;
+}
+
+.project-tags .tag {
+   font-size: 0.8rem;
+   padding: 6px 14px;
+}
+
+.project-meta {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 20px;
+   padding-top: 20px;
+   border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-year {
+   font-size: 0.85rem;
+   color: var(--muted);
+}
+
+.project-link {
+   color: var(--primary);
+   font-size: 0.9rem;
+   font-weight: 500;
+   display: flex;
+   align-items: center;
+   gap: 6px;
+   transition: all 0.3s ease;
+}
+
+.project-link:hover {
+   gap: 10px;
+}
+
+.project-hover-indicator {
+   position: absolute;
+   top: 30px;
+   right: 30px;
+   font-size: 1.5rem;
+   opacity: 0;
+   transform: translateX(-10px);
+   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+   color: var(--primary);
+   z-index: 3;
+}
+
+.project-card:hover .project-hover-indicator {
+   opacity: 1;
+   transform: translateX(0);
+}
+
+/* ========== SKILLS SECTION - Ghibli floating orbs ========== */
+.skills-constellation {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+   gap: 24px;
+   padding: 40px 0;
+}
+
+.skill-orb {
+   aspect-ratio: 1;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 12px;
+   background: var(--surface-glass);
+   backdrop-filter: blur(20px);
+   border: 2px solid rgba(255, 255, 255, 0.1);
+   border-radius: 50%;
+   transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+   cursor: pointer;
+   position: relative;
+   overflow: hidden;
+   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08),
+               inset 0 2px 8px rgba(255, 255, 255, 0.1);
+   animation: gentle-float 6s ease-in-out infinite;
+}
+
+@keyframes gentle-float {
+   0%, 100% { transform: translateY(0px); }
+   50% { transform: translateY(-8px); }
+}
+
+.skill-orb:nth-child(2n) {
+   animation-delay: -2s;
+}
+
+.skill-orb:nth-child(3n) {
+   animation-delay: -4s;
+}
+
+.skill-orb::before {
+   content: '';
+   position: absolute;
+   inset: 0;
+   background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.2), transparent 50%),
+               radial-gradient(circle at center, var(--primary-glow), transparent 70%);
+   opacity: 0;
+   transition: opacity 0.6s ease;
+}
+
+.skill-orb:hover {
+   transform: translateY(-12px) scale(1.08);
+   border-color: var(--primary);
+   box-shadow: 0 16px 48px var(--primary-glow),
+               0 8px 24px rgba(0, 0, 0, 0.15),
+               inset 0 2px 12px rgba(255, 255, 255, 0.15);
+   animation-play-state: paused;
+}
+
+.skill-orb:hover::before {
+   opacity: 1;
+}
+
+.skill-icon {
+   font-size: 2rem;
+   position: relative;
+   z-index: 2;
+   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.skill-orb:hover .skill-icon {
+   transform: scale(1.1);
+}
+
+.skill-name {
+   font-size: 0.9rem;
+   font-weight: 700;
+   font-family: 'Baloo 2', sans-serif;
+   color: var(--text-soft);
+   position: relative;
+   z-index: 2;
+   text-align: center;
+}
+
+/* ========== TIMELINE SECTION ========== */
+.timeline-path {
+   position: relative;
+   padding-left: 60px;
+}
+
+.timeline-path::before {
+   content: '';
+   position: absolute;
+   left: 20px;
+   top: 0;
+   bottom: 0;
+   width: 2px;
+   background: linear-gradient(to bottom, var(--primary), transparent);
+   opacity: 0.3;
+}
+
+.timeline-item {
+   margin-bottom: 60px;
+   position: relative;
+   display: flex;
+   gap: 40px;
+   align-items: flex-start;
+}
+
+.timeline-dot {
+   position: absolute;
+   left: -48px;
+   top: 12px;
+   width: 18px;
+   height: 18px;
+   background: var(--primary);
+   border-radius: 50%;
+   border: 4px solid var(--bg);
+   box-shadow: 0 0 24px var(--primary-glow),
+               0 4px 12px rgba(0, 0, 0, 0.15),
+               inset 0 2px 4px rgba(255, 255, 255, 0.2);
+   z-index: 2;
+   animation: pulse-glow 3s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+   0%, 100% {
+      box-shadow: 0 0 24px var(--primary-glow),
+                  0 4px 12px rgba(0, 0, 0, 0.15),
+                  inset 0 2px 4px rgba(255, 255, 255, 0.2);
+   }
+   50% {
+      box-shadow: 0 0 32px var(--primary-glow),
+                  0 6px 16px rgba(0, 0, 0, 0.2),
+                  inset 0 2px 6px rgba(255, 255, 255, 0.3);
+   }
+}
+
+.timeline-content {
+   flex: 1;
+   padding: 28px 32px;
+   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.timeline-item:hover .timeline-content {
+   transform: translateX(8px);
+}
+
+.timeline-year {
+   display: inline-block;
+   font-size: 0.9rem;
+   color: var(--primary);
+   font-weight: 700;
+   font-family: 'Baloo 2', sans-serif;
+   margin-bottom: 8px;
+   text-transform: lowercase;
+   letter-spacing: 0.05em;
+}
+
+.timeline-content h3 {
+   margin-bottom: 12px;
+}
+
+.timeline-content p {
+   margin: 0;
+   line-height: 1.7;
+}
+
+/* ========== ABOUT SECTION - Ghibli warm & organic ========== */
+.about-grid {
+   display: grid;
+   grid-template-columns: 1.5fr 1fr;
+   gap: 60px;
+   align-items: start;
+}
+
+.about-intro {
+   font-size: 1.35rem;
+   line-height: 1.7;
+   color: var(--text);
+   margin-bottom: 24px;
+   font-weight: 600;
+   font-family: 'Nunito', sans-serif;
+}
+
+.about-text-block p:last-child {
+   margin-top: 20px;
+}
+
+.about-values {
+   padding: 32px;
+   position: sticky;
+   top: 120px;
+}
+
+.values-list {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+.values-list li {
+   padding: 14px 0;
+   color: var(--text-soft);
+   line-height: 1.7;
+   font-family: 'Nunito', sans-serif;
+   font-size: 0.95rem;
+   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+   transition: all 0.3s ease;
+}
+
+.values-list li:hover {
+   color: var(--text);
+   padding-left: 8px;
+   border-bottom-color: var(--primary);
+}
+
+.values-list li:last-child {
+   border-bottom: none;
+}
+
+/* ========== CONTACT SECTION - Ghibli warm invitation ========== */
+.contact {
+   padding: 100px 0;
+   text-align: center;
+   position: relative;
+}
+
+.contact-content h2 {
+   margin-bottom: 24px;
+   font-family: 'Baloo 2', sans-serif;
+}
+
+.contact-subtitle {
+   max-width: 600px;
+   margin: 0 auto 48px;
+   font-size: 1.15rem;
+   font-family: 'Nunito', sans-serif;
+   color: var(--text-soft);
+   line-height: 1.8;
+}
+
+.contact-actions {
+   margin-top: 48px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+   .hero-editorial {
+      grid-template-columns: 1fr;
+      gap: 40px;
+   }
+
+   .vertical-text {
+      writing-mode: horizontal-tb;
+      text-align: center;
+   }
+
+   .about-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+   }
+
+   .about-values {
+      position: static;
+   }
+
+   .timeline-path {
+      padding-left: 40px;
+   }
+
+   .timeline-dot {
+      left: -28px;
+   }
+
+   .projects-grid {
+      grid-template-columns: 1fr;
+   }
+
+   .project-card {
+      min-height: auto;
+   }
+
+   .project-filters {
+      justify-content: center;
+   }
+
+   .filter-btn {
+      flex: 1;
+      min-width: 100px;
+   }
+
+   .skills-constellation {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+   }
+}
+
+@media (max-width: 480px) {
+   .section-description {
+      font-size: 1rem;
+   }
+
+   .project-content {
+      padding: 0 20px 20px;
+   }
+
+   .project-image-container {
+      height: 180px;
+   }
+}

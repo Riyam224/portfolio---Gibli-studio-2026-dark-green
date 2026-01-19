@@ -1,0 +1,163 @@
+// Projects showcase data
+const projectsData = [
+   {
+      id: 1,
+      title: "Laza - Fashion E-Commerce App",
+      category: "Mobile Development",
+      shortDesc: "A production-ready fashion e-commerce app built with Clean Architecture, featuring complete authentication, shopping cart, and payment integration.",
+      fullDesc: "Built a comprehensive fashion e-commerce application implementing Clean Architecture with 3-layer separation (Domain, Data, Presentation). Features complete user authentication flow including social login options, forgot password with OTP verification, and user profile management. Includes advanced product browsing with real-time search and filtering, shopping cart with local/remote sync, reviews system, and full payment integration with multiple methods. Utilizes BLoC pattern for state management, Retrofit for API calls, and GetIt for dependency injection.",
+      tags: ["Flutter", "Dart", "BLoC", "Clean Architecture", "Retrofit", "GetIt"],
+      image: "assets/projects/demos/laza.png",
+      coverImage: "assets/projects/demos/laza.png",
+      videoDemo: "assets/projects/demos/laza_demo.mp4",
+      demoUrl: "#",
+      githubUrl: "https://github.com/Riyam224/laza-ecommerce.git",
+      features: [
+         "Complete authentication with social login & OTP verification",
+         "Real-time product search and category filtering",
+         "Shopping cart with quantity management & price calculation",
+         "Reviews & ratings system",
+         "Multiple payment methods (Card, PayPal)",
+         "Clean Architecture with BLoC pattern"
+      ],
+      year: "2025",
+      role: "Lead Mobile Developer"
+   },
+   {
+      id: 2,
+      title: "Find Your Paw Mate",
+      category: "Mobile Development",
+      shortDesc: "A production-ready pet adoption app showcasing Clean Architecture, BLoC pattern, and comprehensive testing with 87.3% code coverage.",
+      fullDesc: "Built a professional pet adoption application featuring dual API integration (Dog API + Cat API) with advanced search, real-time filtering, and favorites management. Implemented Clean Architecture with 3-layer separation, BLoC state management using 5 dedicated Cubits, and comprehensive testing with 200+ test cases across 39 test files. Features debounced search, category filtering, detailed breed information, and persistent favorites storage.",
+      tags: ["Flutter", "Dart", "BLoC", "Clean Architecture", "Dartz", "GetIt"],
+      image: "assets/projects/demos/find_ur_pet.png",
+      coverImage: "assets/projects/demos/find_ur_pet.png",
+      videoDemo: "assets/projects/demos/find_ur_pet_demo.MP4",
+      demoUrl: "#",
+      githubUrl: "https://github.com/Riyam224/-find_your_paw_mate.git",
+      features: [
+         "Browse dog/cat breeds with pagination and search",
+         "Real-time debounced search (500ms)",
+         "Category filtering and breed group selection",
+         "Favorites management with persistent storage",
+         "87.3% test coverage with 200+ test cases",
+         "Clean Architecture with BLoC pattern"
+      ],
+      year: "2025",
+      role: "Lead Mobile Developer"
+   },
+   {
+      id: 3,
+      title: "TMDB Movies App",
+      category: "Mobile Development",
+      shortDesc: "A feature-rich Flutter application showcasing popular movies using The Movie Database API with offline-first architecture.",
+      fullDesc: "Built a comprehensive movie browsing application featuring clean architecture, offline-first caching, and multiple theme support. The app demonstrates advanced Flutter concepts including BLoC state management, Hive local storage, and cache-first architecture for optimal performance. Includes pagination, detailed movie information, genre filtering, and seamless offline support.",
+      tags: ["Flutter", "Dart", "BLoC", "Hive", "REST API", "Clean Architecture"],
+      image: "assets/projects/demos/TMDB.png",
+      coverImage: "assets/projects/demos/TMDB.png",
+      gifDemo: "assets/projects/demos/movies_tmdbdemo.gif",
+      demoUrl: "#",
+      githubUrl: "https://github.com/Riyam224/TMDB-Movies.git",
+      features: [
+         "Browse popular movies with pagination",
+         "Offline-first caching with Hive",
+         "Multiple theme support (Light, Dark, Custom)",
+         "Detailed movie information with hero animations",
+         "Network connectivity detection",
+         "Clean Architecture implementation"
+      ],
+      year: "2025",
+      role: "Lead Mobile Developer"
+   },
+   {
+      id: 4,
+      title: "Shake to Quote",
+      category: "Mobile Development",
+      shortDesc: "A motivational quotes app leveraging Flutter Platform Channels with native Android accelerometer integration for shake detection.",
+      fullDesc: "Built an interactive motivational quotes application demonstrating Flutter-Native communication through Platform Channels. Implements custom shake detection using Android's Accelerometer API with a sophisticated algorithm (acceleration > 12 threshold). Features include EventChannel for real-time sensor streaming, MethodChannel for bidirectional communication, MediaPlayer for sound effects, and Vibrator API for haptic feedback. Includes auto-change mode with Timer.periodic, beautiful pastel color generation using HSL algorithm, smart contrast-aware text color, and multiple animations (scale, fade, shake with elastic curve).",
+      tags: ["Flutter", "Dart", "Kotlin", "Platform Channels", "Android Sensors", "Animations"],
+      image: "assets/projects/demos/shake_to_quote.png",
+      coverImage: "assets/projects/demos/shake_to_quote.png",
+      gifDemo: "assets/projects/demos/shake_to_quote_demo.gif",
+      demoUrl: "#",
+      githubUrl: "https://github.com/Riyam224/shake-to-quote-app.git",
+      features: [
+         "Custom shake detection with accelerometer (3D magnitude)",
+         "EventChannel & MethodChannel implementation",
+         "Multi-sensory feedback (sound, vibration, visual)",
+         "Auto-change mode with smooth animations",
+         "HSL-based pastel color generation",
+         "Smart contrast-aware text color"
+      ],
+      year: "2025",
+      role: "Lead Mobile Developer"
+   },
+   {
+      id: 5,
+      title: "CryptoWallet - Enterprise Fintech App",
+      category: "Mobile Development",
+      shortDesc: "An enterprise-grade cryptocurrency trading platform with Clean Architecture, biometric authentication, AES-256 encryption, and 122+ comprehensive tests.",
+      fullDesc: "Built a production-ready cryptocurrency trading platform implementing Clean Architecture with strict layer separation and SOLID principles. Features enterprise-grade security with biometric authentication, AES-256 encryption, and flutter_secure_storage for sensitive data protection. Integrates real-time market data from CoinGecko API with advanced portfolio management, transaction history, and secure wallet management. Implements BLoC pattern for state management with comprehensive testing suite of 122+ test cases covering unit, widget, and integration tests.",
+      tags: ["Flutter", "Dart", "BLoC", "Clean Architecture", "Firebase", "Security", "Biometric Auth", "REST API"],
+      image: "assets/projects/demos/fintech.png",
+      coverImage: "assets/projects/demos/fintech.png",
+      videoDemo: "assets/projects/demos/fintech.MP4",
+      demoUrl: "#",
+      githubUrl: "https://github.com/Riyam224/team_18_final_project.git",
+      features: [
+         "Enterprise security: Biometric auth + AES-256 encryption",
+         "Real-time cryptocurrency market data integration",
+         "Secure portfolio & transaction management",
+         "122+ test cases with comprehensive coverage",
+         "Clean Architecture with strict layer separation",
+         "Multi-platform support (iOS, Android, Web)"
+      ],
+      year: "2025",
+      role: "Lead Mobile Developer"
+   },
+   {
+      id: 6,
+      title: "Django Portfolio Website",
+      category: "Web Development",
+      shortDesc: "A single-page Django portfolio with a bold purple theme and smooth-scroll sections, featuring an admin-managed gallery.",
+      fullDesc: "A single-page Django portfolio with a bold purple theme: smooth-scroll sections (hero, about, services, experience, projects, contact), plus a simple admin-managed gallery of posts (title + image). Static assets served locally, uploads stored in media/, ready for quick customization and deploy.",
+      tags: ["Django", "Python", "HTML", "CSS", "JavaScript"],
+      image: "assets/projects/demos/dj_frontend_portfolio.png",
+      coverImage: "assets/projects/demos/dj_frontend_portfolio.png",
+      gifDemo: "assets/projects/demos/dj_frontend_portfolio.gif",
+      demoUrl: "#",
+      githubUrl: "https://github.com/Riyam224/portfolio_django.git",
+      features: [
+         "Single-page smooth-scroll design",
+         "Bold purple theme with modern aesthetics",
+         "Admin-managed gallery system",
+         "Multiple sections: hero, about, services, experience, projects, contact",
+         "Local static assets and media uploads",
+         "Ready for quick customization and deployment"
+      ],
+      year: "2025",
+      role: "Full Stack Developer"
+   },
+   {
+      id: 7,
+      title: "Restaurant API",
+      category: "Web Development",
+      shortDesc: "A Django REST Framework backend for restaurant ordering with menu, cart, and order workflows.",
+      fullDesc: "Built a comprehensive restaurant ordering API with Django REST Framework. Includes JWT-based authentication, menu catalog with categories/products, cart management with automatic totals, and full order lifecycle tracking. Ships with interactive Swagger docs and an OpenAPI schema for fast frontend integration.",
+      tags: ["Django", "Django REST Framework", "Python", "JWT", "Swagger"],
+      image: "assets/projects/demos/restaurant_api.png",
+      coverImage: "assets/projects/demos/restaurant_api.png",
+      gifDemo: "assets/projects/demos/restaurant_api.gif",
+      demoUrl: "#",
+      githubUrl: "https://github.com/Riyam224/Restaurant-System-API---DRF.git",
+      features: [
+         "JWT auth with access/refresh tokens",
+         "Menu catalog with categories and products",
+         "Cart management with auto totals",
+         "Order lifecycle: pending → preparing → on_the_way → delivered",
+         "Swagger UI + OpenAPI schema"
+      ],
+      year: "2025",
+      role: "Backend Developer"
+   }
+];

@@ -1,0 +1,50 @@
+:root {
+  /* Light – Ghibli ethereal day */
+  --bg: #f5f3ed;
+  --bg-gradient: linear-gradient(180deg, #f5f3ed 0%, #e8ebe4 100%);
+  --surface: rgba(255, 255, 255, 0.75);
+  --surface-glass: rgba(255, 255, 255, 0.45);
+  --text: #2a2f2b;
+  --text-soft: #4a524d;
+  --muted: #6b7470;
+
+  --primary: #7ba888;
+  --primary-glow: rgba(123, 168, 136, 0.3);
+  --secondary: #c9a86a;
+  --accent: #8faea1;
+  --sky-blue: #a8c5d1;
+  --moonlight: #d4dce0;
+  --leaf-green: #9fc5a8;
+  --totoro-gray: #8a8e8d;
+
+  --radius: 20px;
+  --radius-lg: 28px;
+  --spacing-section: 80px;
+
+  /* Atmospheric effects */
+  --grain-opacity: 0.02;
+  --particle-opacity: 0.5;
+}
+
+/* Dark – Enchanted night forest (Totoro moonlight) */
+[data-theme="dark"] {
+  --bg: #0d1310;
+  --bg-gradient: radial-gradient(ellipse at top, #1a2420 0%, #0d1310 60%);
+  --surface: rgba(22, 29, 25, 0.65);
+  --surface-glass: rgba(22, 29, 25, 0.35);
+  --text: #e8ede9;
+  --text-soft: #c5d0cb;
+  --muted: #8a9690;
+
+  --primary: #9fc5a8;
+  --primary-glow: rgba(159, 197, 168, 0.25);
+  --secondary: #d6c08d;
+  --accent: #7da6a0;
+  --sky-blue: #6b8794;
+  --moonlight: #b8c5cc;
+  --leaf-green: #9fc5a8;
+  --totoro-gray: #a5a9a8;
+
+  --grain-opacity: 0.03;
+  --particle-opacity: 0.7;
+}

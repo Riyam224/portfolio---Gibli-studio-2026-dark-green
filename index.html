@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Riyam — Portfolio</title>
+
+   <link rel="stylesheet" href="css/variables.css" />
+   <link rel="stylesheet" href="css/base.css" />
+   <link rel="stylesheet" href="css/layout.css" />
+   <link rel="stylesheet" href="css/components.css" />
+   <link rel="stylesheet" href="css/sections.css" />
+</head>
+
+<body>
+   <!-- Atmospheric elements -->
+   <div class="grain-overlay"></div>
+   <canvas id="particles-canvas"></canvas>
+   <div class="ambient-glow ambient-glow-1"></div>
+   <div class="ambient-glow ambient-glow-2"></div>
+
+   <header class="navbar">
+      <div class="nav-left">R</div>
+      <nav class="nav-links">
+         <a href="#projects">Projects</a>
+         <a href="#skills">Skills</a>
+         <a href="#experience">Experience</a>
+         <a href="#about">About</a>
+         <button id="theme-toggle" class="theme-btn">
+            <span class="theme-icon">☾</span>
+         </button>
+      </nav>
+   </header>
+
+   <br />
+   <br />
+
+
+   <section class="hero">
+      <div class="hero-atmosphere">
+         <div class="hero-fog fog-1"></div>
+         <div class="hero-fog fog-2"></div>
+         <div class="hero-fog fog-3"></div>
+      </div>
+
+      <div class="container hero-editorial">
+         <div class="hero-side">
+            <span class="vertical-text">portfolio 2026</span>
+         </div>
+
+         <div class="hero-main">
+            <div class="hero-content">
+               <h1 class="reveal-text">
+                  I build things people<br>
+                  actually enjoy using<br>
+                  <span class="text-gradient">turning ideas into reality</span>
+               </h1>
+
+               <p class="hero-subtitle">
+                  Full-stack developer who turns messy ideas into smooth Flutter apps and solid Django APIs.
+                  I blend design, logic, and a bit of magic to create experiences that just work.
+               </p>
+
+            </div>
+         </div>
+      </div>
+
+      <div class="scroll-indicator">
+         <span class="scroll-text">Scroll to explore</span>
+         <span class="scroll-line"></span>
+      </div>
+   </section>
+
+
+   <section id="projects">
+      <div class="container">
+         <div class="section-header">
+            <span class="section-label">What I've Built</span>
+            <h2>Selected Works</h2>
+            <p class="section-description">
+               A collection of projects showcasing my approach to building
+               thoughtful, scalable, and user-centered applications.
+            </p>
+         </div>
+
+         <!-- Filter buttons -->
+         <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+         </div>
+
+         <!-- Projects will be dynamically loaded here -->
+         <div class="projects-grid" id="projects-container">
+            <!-- Projects loaded via JavaScript -->
+         </div>
+      </div>
+   </section>
+
+   <!-- Project Detail Modal -->
+   <div id="project-modal" class="modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content glass-card">
+         <button class="modal-close">&times;</button>
+
+         <div class="modal-body">
+            <div class="modal-image-container">
+               <img id="modal-image" src="" alt="" class="modal-image">
+            </div>
+
+            <div class="modal-details">
+               <div class="modal-header">
+                  <span id="modal-category" class="modal-category"></span>
+                  <h2 id="modal-title" class="modal-title"></h2>
+                  <p id="modal-full-desc" class="modal-description"></p>
+               </div>
+
+               <div class="modal-meta">
+                  <div class="meta-item">
+                     <span class="meta-label">Role</span>
+                     <span id="modal-role" class="meta-value"></span>
+                  </div>
+                  <div class="meta-item">
+                     <span class="meta-label">Year</span>
+                     <span id="modal-year" class="meta-value"></span>
+                  </div>
+               </div>
+
+               <div class="modal-section">
+                  <h4>Key Features</h4>
+                  <ul id="modal-features" class="features-list"></ul>
+               </div>
+
+               <div class="modal-section">
+                  <h4>Technologies</h4>
+                  <div id="modal-tags" class="project-tags"></div>
+               </div>
+
+               <div class="modal-actions">
+                  <a id="modal-demo" href="#" class="cta-primary" target="_blank" rel="noopener">
+                     <span>View Demo</span>
+                     <span class="cta-arrow">→</span>
+                  </a>
+                  <a id="modal-github" href="#" class="cta-secondary" target="_blank" rel="noopener">
+                     <span>View Code</span>
+                     <span>⟨/⟩</span>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <section id="skills">
+      <div class="container">
+         <div class="section-header">
+            <span class="section-label">Skills</span>
+            <h2>Core Stack</h2>
+         </div>
+
+         <div class="skills-constellation">
+            <div class="skill-orb" data-category="mobile">
+               <span class="skill-icon">📱</span>
+               <span class="skill-name">Flutter & Dart</span>
+            </div>
+            <div class="skill-orb" data-category="backend">
+               <span class="skill-icon">⚙️</span>
+               <span class="skill-name">Django & DRF</span>
+            </div>
+            <div class="skill-orb" data-category="api">
+               <span class="skill-icon">🔗</span>
+               <span class="skill-name">REST APIs & JWT</span>
+            </div>
+            <div class="skill-orb" data-category="architecture">
+               <span class="skill-icon">🏛️</span>
+               <span class="skill-name">Clean Architecture</span>
+            </div>
+            <div class="skill-orb" data-category="cloud">
+               <span class="skill-icon">☁️</span>
+               <span class="skill-name">Firebase</span>
+            </div>
+            <div class="skill-orb" data-category="frontend">
+               <span class="skill-icon">⚛️</span>
+               <span class="skill-name">HTML, CSS, JS</span>
+            </div>
+            <div class="skill-orb" data-category="database">
+               <span class="skill-icon">🗄️</span>
+               <span class="skill-name">SQLite & PostgreSQL</span>
+            </div>
+            <div class="skill-orb" data-category="tools">
+               <span class="skill-icon">🛠️</span>
+               <span class="skill-name">Git & Postman</span>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section id="experience">
+      <div class="container">
+         <div class="section-header">
+            <span class="section-label">Experience</span>
+            <h2>From Zero to Real Products</h2>
+         </div>
+
+         <div class="timeline-path">
+            <div class="timeline-item">
+               <div class="timeline-dot"></div>
+               <div class="timeline-content glass-card">
+                  <span class="timeline-year">2024 – Present</span>
+                  <h3>Flutter Mobile Apps</h3>
+                  <p>Building production-ready apps with BLoC, clean architecture, and smooth offline-first flows.</p>
+               </div>
+            </div>
+
+            <div class="timeline-item">
+               <div class="timeline-dot"></div>
+               <div class="timeline-content glass-card">
+                  <span class="timeline-year">2023 – Present</span>
+                  <h3>Django REST APIs</h3>
+                  <p>Creating secure, scalable APIs with JWT auth, Swagger docs, and clean responses.</p>
+               </div>
+            </div>
+
+            <div class="timeline-item">
+               <div class="timeline-dot"></div>
+               <div class="timeline-content glass-card">
+                  <span class="timeline-year">2022 – 2024</span>
+                  <h3>Web & UI/UX Design</h3>
+                  <p>Crafting thoughtful web experiences and designing interfaces with Figma—blending code and
+                     creativity.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section id="about">
+      <div class="container">
+         <div class="about-content">
+            <div class="section-header">
+               <span class="section-label">About</span>
+               <h2>Building with Logic & Imagination</h2>
+            </div>
+
+            <div class="about-grid">
+               <div class="about-text-block">
+                  <p class="about-intro">
+                     I'm a full-stack developer who enjoys turning ideas into real, usable products.
+                  </p>
+                  <p>
+                     I build Flutter mobile apps and Django REST APIs—but for me, coding is more than logic.
+                     It's about creating experiences that make sense, feel smooth, and grow beautifully over time.
+                     I blend development with design using Figma, exploring how AI can enhance everyday applications.
+                  </p>
+               </div>
+
+               <div class="about-values glass-card">
+                  <h4>What I bring</h4>
+                  <ul class="values-list">
+                     <li>🎨 Clean code & thoughtful architecture</li>
+                     <li>📱 Flutter apps with BLoC & offline-first flows</li>
+                     <li>⚙️ Django APIs with JWT & clear docs</li>
+                     <li>✨ UI/UX mindset with Figma integration</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="contact">
+      <div class="container">
+         <div class="contact-content">
+            <h2>Let's build something<br>that feels right</h2>
+            <p class="contact-subtitle">
+               Whether you're starting from zero or refining an idea,
+               I'd love to turn it into something real.
+            </p>
+            <div class="contact-actions">
+               <a href="mailto:hello@example.com" class="cta-primary cta-glow">
+                  <span>Start a conversation</span>
+                  <span class="cta-arrow">→</span>
+               </a>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <script src="js/projects-data.js"></script>
+   <script src="js/projects.js"></script>
+   <script src="js/theme.js"></script>
+   <script src="js/scroll.js"></script>
+   <script src="js/main.js"></script>
+
+</body>
+
+</html>
