@@ -149,7 +149,7 @@ const projectsData = [
       coverImage: "assets/projects/demos/ai_therapist_api.png",
       gifDemo: "assets/projects/demos/ai_therapist_api.gif",
       demoUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/Riyam224/ai_therapist_backend.git",
       features: [
          "AI-generated therapy responses via GROQ LLaMA 3.1",
          "Mood input: emoji + free-text thoughts",
