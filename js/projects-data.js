@@ -140,6 +140,29 @@ const projectsData = [
    },
    {
       id: 7,
+      title: "MindEase — AI Therapist API",
+      category: "Web Development",
+      shortDesc: "A Django REST Framework backend powering an AI therapist app, integrating GROQ's LLaMA model for mood-based mental wellness responses.",
+      fullDesc: "Built the backend for MindEase, an AI therapist mood journal app. The API accepts user mood inputs (emoji + thoughts) and returns empathetic AI-generated responses via GROQ's llama-3.1-8b-instant model. Features JWT authentication, mood history tracking, and is deployed live on Railway. Consumed by a Flutter mobile app built with Clean Architecture, BLoC, and Hive for offline-first caching.",
+      tags: ["Django", "Django REST Framework", "Python", "GROQ API", "LLaMA", "Railway", "JWT"],
+      image: "assets/projects/demos/ai_therapist_api.png",
+      coverImage: "assets/projects/demos/ai_therapist_api.png",
+      gifDemo: "assets/projects/demos/ai_therapist_api.gif",
+      demoUrl: "#",
+      githubUrl: "#",
+      features: [
+         "AI-generated therapy responses via GROQ LLaMA 3.1",
+         "Mood input: emoji + free-text thoughts",
+         "Full mood history with timestamps",
+         "JWT authentication",
+         "Deployed on Railway with live endpoints",
+         "Consumed by Flutter app with Clean Architecture"
+      ],
+      year: "2026",
+      role: "Full Stack Developer"
+   },
+   {
+      id: 8,
       title: "Restaurant API",
       category: "Web Development",
       shortDesc: "A Django REST Framework backend for restaurant ordering with menu, cart, and order workflows.",
