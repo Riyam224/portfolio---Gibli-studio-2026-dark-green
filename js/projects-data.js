@@ -166,6 +166,32 @@ const projectsData = [
    },
    {
       id: 8,
+      title: "LunaTree — AI Therapist App",
+      category: "Full-Stack & Mobile",
+      shortDesc: "A Flutter mood journal where you share feelings with Luna — an empathetic AI — and grow a virtual plant through daily streaks. Full-stack: Flutter frontend + Django REST backend on Railway, powered by GROQ's LLaMA 3.1.",
+      fullDesc: "LunaTree is a full-stack Flutter application that pairs a polished mobile experience with the MindEase Django REST backend. Users submit a mood entry — an emoji and free-text thoughts — and Luna (GROQ's llama-3.1-8b-instant) responds with warm, personalized reflections in real time. A streak-powered plant growth system gamifies daily journaling: miss a day and the plant wilts; stay consistent and it blooms. The app includes a searchable mood journal with emoji filtering, an AI-generated weekly wellness letter with mood statistics, a saved-quotes library, a guided 4-7-8 breathing exercise, and emoji-specific affirmation cards. Authentication is handled by Supabase supporting both email/password and Google OAuth. Built with Clean Architecture (Domain / Data / Presentation), BLoC (Cubit) for state management, Dio + PrettyDioLogger for networking, GetIt for dependency injection, and Hive for persistent local storage and theme preference.",
+      tags: ["Flutter", "Dart", "BLoC", "Clean Architecture", "Supabase", "GROQ API", "Django REST Framework", "Hive", "GetIt"],
+      image: "assets/projects/demos/ai_therapist_app.png",
+      coverImage: "assets/projects/demos/ai_therapist_app.png",
+      videoDemo: "assets/projects/demos/ai_therapist_app.MP4",
+      demoUrl: "https://web-production-f8628.up.railway.app/#examples",
+      githubUrl: "https://github.com/Riyam224/ai_therapist_app.git",
+      features: [
+         "AI mood responses: share emoji + thoughts → Luna replies with empathy via GROQ LLaMA 3.1",
+         "Streak & plant growth gamification — daily journaling grows a virtual plant (seed → sprout → blooming)",
+         "Searchable mood journal with emoji filter and full entry history",
+         "AI-generated weekly wellness letter with mood statistics and personalized insights",
+         "Google OAuth & email/password authentication via Supabase",
+         "Guided 4-7-8 breathing exercise and emoji-specific affirmation cards",
+         "Saved-quotes library — bookmark Luna's best responses",
+         "Dark / Light theme persisted across sessions with Hive",
+         "Clean Architecture with BLoC (Cubit), Dio, GetIt, and dartz (Either)"
+      ],
+      year: "2026",
+      role: "Full-Stack Mobile Developer"
+   },
+   {
+      id: 9,
       title: "Restaurant API",
       category: "Web Development",
       shortDesc: "A Django REST Framework backend for restaurant ordering with menu, cart, and order workflows.",

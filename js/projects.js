@@ -5,6 +5,7 @@ function getCategoryIcon(category) {
    const icons = {
       'Mobile Development': '📱',
       'Full-Stack Development': '💻',
+      'Full-Stack & Mobile': '🤖',
       'Mobile & AI': '🤖',
       'Web Application': '🌐',
       'IoT & Web': '🔌',
